@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Alumno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Formulario de Registro de Alumno</h1>
+
+    <!-- Formulario principal -->
+    <form id="formAlumno">
+        <label>
+            Nombre:
+            <input type="text" name="Nombre" required>
+        </label>
+
+        <label>
+            Apellido:
+            <input type="text" name="Apellido" required>
+        </label>
+
+        <label>
+            DNI:
+            <input type="number" min="1000000" maxlength="8" minlength="7" name="DNI"
+                placeholder="ingrese su documento sin puntos ni comas" required>
+        </label>
+
+        <label>
+            Fecha de nacimiento:
+            <input type="date" name="Fecha_de_nacimiento" required>
+        </label>
+
+
+        <label>
+            Sexo:
+            <select name="Sexo" required>
+                <option value="">Seleccionar</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
+        </label>
+
+        <label>
+            ID Curso:
+            <select name="ID_Curso" required>
+                <option value="">Seleccionar curso</option>
+                <option value="4">Sala 5A</option>
+                <option value="6">2do A</option>
+                <option value="3">6to B</option>
+                <option value="1">1ro A</option>
+                <option value="2">3do B</option>
+                <option value="5">1ro B</option>
+            </select>
+        </label>
+
+        <div class="levelDiv">
+
+            <div class="levelSelectionDiv">
+                <label>
+                    <input type="radio" value="3" name="ID_Nivel">
+                    Nivel Inicial:
+                </label>
+            </div>
+
+            <div class="levelSelectionDiv">
+                <label>
+                    <input type="radio" value="1" name="ID_Nivel">
+                    Nivel Primario:
+                </label>
+            </div>
+            <div class="levelSelectionDiv">
+                <label>
+                    <input type="radio" value="2" name="ID_Nivel">
+                    Nivel Secundario:
+                </label>
+            </div>
+
+
+
+        </div>
+
+
+        <button type="submit">Registrar Alumno</button>
+    </form>
+
+    <!-- Creamos un DIV para mostrar la respuesta del endpoint -->
+    <div class="respuesta" id="respuesta"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
