@@ -1,5 +1,5 @@
 document.getElementById('formAlumno').addEventListener('submit', async function (event) {
-    event.preventDefault(); //con esto evitamos que se recargue la página
+    event.preventDefault(); 
 
     const formData = new FormData(this);
     const datos = Object.fromEntries(formData.entries());
